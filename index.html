@@ -10,7 +10,7 @@
    </head>
 
   <body ng-controller="TodoCtrl">
-    <div id="todo-app" >
+    <div>
       <section>
           <h1>Todo App</h1>
           <input id="input-todo" type="text" ng-model="todoText" placeholder="Add todo here" ng-keyup="add()"/>
@@ -28,7 +28,7 @@
       
       <section>
           <div>
-            <span>{{remaining()}} to do</span>
+            <span>{{left()}} to do</span>
             <button type="button" ng-click="clear()">
               Clear done item(s)
             </button>

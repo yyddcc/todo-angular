@@ -16,9 +16,9 @@
       $scope.todos.splice(index, 1);
     };
       
-    $scope.remaining = function() {
+    $scope.left = function() {
       var count = 0;
-      angular.forEach($scope.todos, function(todo) {
+    ($scope.todos).forEach(function(todo) {
         if (!todo.done) count += 1;
       });
       return count;
@@ -27,7 +27,7 @@
     $scope.clear = function() {
       var temp = $scope.todos;
       $scope.todos = [];
-      angular.forEach(temp, function(todo) {
+      temp.forEach(function(todo) {
         if (!todo.done) $scope.todos.push(todo);
       });
     };
